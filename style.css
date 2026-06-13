@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(
+        90deg,
+        #7c35e6,
+        #2720eb,
+        #0f172a
+    );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circulo1, .circulo2 {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    box-shadow: 0 0 30px rgba(255,255,255,0.7);
+}
+
+.circulo1 {
+    position: fixed;
+    top: 50px;
+    left: 60px;
+}
+
+.circulo2 {
+    position: fixed;
+    bottom: 50px;
+    right: 60px;
+}
+
+main {
+    background-color: rgba(165, 186, 191, 0.4);
+    width: 700px;
+    height: 550px;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(255,255,255,0.7);
+    padding: 30px;
+}
+
+.titulo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: rgb(202, 226, 248);
+}
+
+.material-symbols-outlined.icone-titulo {
+    margin-top: 10px;
+    font-size: 100px;
+    color: aliceblue;
+    background: linear-gradient(
+        50deg,
+        #7c35e6,
+        #2720eb,
+        #0f172a
+    );
+    border-radius: 10px;
+}
+
+h1 {
+    font-size: 30px;
+    margin-top: 20px;
+    margin-bottom: 6px;
+    text-align: center;
+    font-family: "Orbitron", sans-serif;
+    
+}
+
+.descricao {
+    font-size: 9px;
+    font-family: 'outfit', sans-serif;
+    display: flex;
+    justify-content: center;
+    color: rgb(147, 188, 227);
+
+}
+
+.card1 {
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+    margin-bottom: 20px;
+    width: 682px;
+    background-color: rgba(165, 186, 191, 0.2);
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(255,255,255,0.7);
+    padding: 8px;
+}
+.listas {
+    display: flex;
+    justify-content: center;
+    font-family: 'outfit', sans-serif;
+    font-size: 15px;
+    gap: 100px;
+}
+
+.card1 h2 {
+    font-size: 12px;
+    font-family: 'Iosevka Charon', monospace;
+    color: rgb(202, 226, 248);
+}
+
+.card1 ul {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.card1 ul li {
+    display: flex;
+    list-style-type: none;
+}
+
+.card2 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+button {
+    width: 200px;
+    height: 45px;
+    border-radius: 20px;
+    border: none;
+    font-family: 'outfit', sans-serif;
+    color: rgb(202, 226, 248);
+    background: linear-gradient(
+        50deg,
+        #7c35e6,
+        #2720eb,
+        #0f172a
+    );
+    box-shadow: 0 0 5px rgba(255,255,255,0.7);
+}
+
+.frases {
+    display: flex;
+    text-align: center;
+    margin-top: 10px;
+    font-family: 'outfit', sans-serif;
+    font-size: 15px;
+}
+
+.frases ul li {
+    list-style-type: none;
+}
+
+li {
+    color: #142c64;
+}
