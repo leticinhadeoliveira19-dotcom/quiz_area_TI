@@ -156,3 +156,13 @@ button {
 li {
     color: #142c64;
 }
+
+
+#inicio {
+    display: none;
+}
+
+#quiz {
+    display: block;
+}
+
