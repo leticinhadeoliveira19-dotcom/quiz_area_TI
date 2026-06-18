@@ -3,6 +3,21 @@
     padding: 0;
 }
 
+:root {
+    --roxo: #7c35e6;
+    --azul: #2720eb;
+    --escuro: #0f172a;
+    --sombra-circulo1: rgba(255,255,255,0.6);
+    --sombra-circulo2-card: rgba(255,255,255,0.7);
+    --background: rgba(165, 186, 191, 0.4);
+    --background-claro: rgba(165, 186, 191, 0.2);
+    --azul-claro: rgb(202, 226, 248);
+    --azul-claro2: rgb(147, 188, 227);
+    --barra: rgba(255,255,255,0.15);
+    --azul-escuro1: #142c64;
+    --azul-escuro2: #10234e;
+}
+
 #inicio {
     display: none;
 }
@@ -11,9 +26,9 @@ body {
     min-height: 100vh;
     background: linear-gradient(
         90deg,
-        #7c35e6,
-        #2720eb,
-        #0f172a
+        var(--roxo),
+        var(--azul),
+        var(--escuro)
     );
     display: flex;
     justify-content: center;
@@ -30,22 +45,22 @@ body {
     position: fixed;
     top: 50px;
     left: 60px;
-    box-shadow: 0 0 30px rgba(255,255,255,0.6);
+    box-shadow: 0 0 30px var(--sombra-circulo1);
 }
 
 .circulo2 {
     position: fixed;
     bottom: 50px;
     right: 60px;
-    box-shadow: 0 0 30px rgba(255,255,255,0.7);
+    box-shadow: 0 0 30px var(--sombra-circulo2-card);
 }
 
 main {
-    background-color: rgba(165, 186, 191, 0.4);
+    background-color: var(--background);
     width: 700px;
     height: 550px;
     border-radius: 20px;
-    box-shadow: 0 0 30px rgba(255,255,255,0.7);
+    box-shadow: 0 0 30px var(--sombra-circulo2-card);
     padding: 30px;
 }
 
@@ -53,7 +68,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: rgb(202, 226, 248);
+    color: var(--azul-claro);
 }
 
 .material-symbols-outlined.icone-titulo {
@@ -62,9 +77,9 @@ main {
     color: aliceblue;
     background: linear-gradient(
         50deg,
-        #7c35e6,
-        #2720eb,
-        #0f172a
+        var(--roxo),
+        var(--azul),
+        var(--escuro)
     );
     border-radius: 10px;
 }
@@ -83,7 +98,7 @@ h1 {
     font-family: 'outfit', sans-serif;
     display: flex;
     justify-content: center;
-    color: rgb(147, 188, 227);
+    color: var(--azul-claro2);
 
 }
 
@@ -93,9 +108,9 @@ h1 {
     margin-top: 25px;
     margin-bottom: 20px;
     width: 682px;
-    background-color: rgba(165, 186, 191, 0.2);
+    background-color: var(--background-claro);
     border-radius: 10px;
-    box-shadow: 0 0 5px rgba(255,255,255,0.7);
+    box-shadow: 0 0 5px var(--sombra-circulo2-card);
     padding: 8px;
 }
 
@@ -110,7 +125,7 @@ h1 {
 .card1 h2 {
     font-size: 12px;
     font-family: 'Iosevka Charon', monospace;
-    color: rgb(202, 226, 248);
+    color: var(--azul-claro);
 }
 
 .card1 ul {
@@ -137,14 +152,14 @@ button {
     border-radius: 20px;
     border: none;
     font-family: 'outfit', sans-serif;
-    color: rgb(202, 226, 248);
+    color: var(--azul-claro);
     background: linear-gradient(
         50deg,
-        #7c35e6,
-        #2720eb,
-        #0f172a
+        var(--roxo),
+        var(--azul),
+        var(--escuro)
     );
-    box-shadow: 0 0 5px rgba(255,255,255,0.7);
+    box-shadow: 0 0 5px var(--sombra-circulo2-card);
 }
 
 .frases {
@@ -160,7 +175,7 @@ button {
 }
 
 li {
-    color: #142c64;
+    color: var(--azul-escuro1);
 }
 
 #quiz {
@@ -177,7 +192,7 @@ li {
 .barra {
     width: 100%;
     height: 12px;
-    background-color: rgba(255,255,255,0.15);
+    background-color: var(--barra);
     border-radius: 20px;
     margin-bottom: 12px;
 }
@@ -187,9 +202,9 @@ li {
     height: 100%;
     background: linear-gradient(
         80deg,
-        #7c35e6,
-        #2720eb,
-        #0f172a
+        var(--roxo),
+        var(--azul),
+        var(--escuro)
     );
     border-radius: 20px;
 }
@@ -197,8 +212,7 @@ li {
 .card3 h3 {
     font-size: 18px;
     font-family: 'Iosevka Charon', monospace;
-    color: rgba(255,255,255,0.7);
-    
+    color: var(--azul-claro);
 }
 
 .bloco {
@@ -212,8 +226,8 @@ li {
 label {
     border-radius: 20px;
     padding: 4px;
-    background-color: rgba(165, 186, 191, 0.2);
-    color: #10234e;
+    background-color: var(--background-claro);
+    color: var(--azul-escuro2);
 }
 
 label input {
@@ -225,9 +239,6 @@ label input {
     justify-content: center;
     margin-top: 40px;
 }
-
-
-
 
 #resultado {
     display: block;
@@ -245,9 +256,9 @@ label input {
     color: aliceblue;
     background: linear-gradient(
         50deg,
-        #7c35e6,
-        #2720eb,
-        #0f172a
+        var(--roxo),
+        var(--azul),
+        var(--escuro)
     );
     border-radius: 10px;
 }
@@ -255,23 +266,23 @@ label input {
 .titulo2 h2 {
     margin-top: 10px;
     margin-bottom: 5px;
-    color: rgba(255,255,255,0.7);
+    color: var(--azul-claro);
     font-family: 'Orbitron', sans-serif;
     font-size: 18px;
 }
 .titulo2 p {
     margin-bottom: 20px;
-    color: rgb(147, 188, 227);
+    color: var(--azul-claro2);
     font-family: 'outfit', sans-serif;
 }
 
 .card4{
-    background-color: rgba(165, 186, 191, 0.4);
+    background-color: var(--background);
     border-radius: 10px;
     width: 682px;
     height: 280px;
     padding: 8px;
-    box-shadow: 0 0 30px rgba(255,255,255,0.7);
+    box-shadow: 0 0 5px var(--sombra-circulo2-card);
 }
 
 .area {
@@ -284,7 +295,7 @@ label input {
 }
 
 .area p {
-    color: #10234e;
+    color: var(--azul-escuro2);
     font-family: 'outfit', sans-serif;
     font-size: 15px;
 } 
@@ -293,7 +304,7 @@ label input {
     font-size: 25px;
     margin-top: 20px;
     font-family: 'Iosevka Charon', monospace;
-    color: #142c64;
+    color: var(--azul-escuro1);
 }
 
 .listas2 {
@@ -303,7 +314,7 @@ label input {
 }
 
 .habilidades {
-    background-color: rgba(165, 186, 191, 0.2);
+    background-color: var(--background-claro);
     padding: 15px;
     border-radius: 10px;
     
@@ -312,7 +323,7 @@ label input {
 .habilidades p {
     margin-bottom: 15px;
     font-family: 'Iosevka Charon', monospace;
-    color: rgba(255,255,255,0.5);
+    color: var(--azul-claro);
 }
 
 .habilidades ul li {
