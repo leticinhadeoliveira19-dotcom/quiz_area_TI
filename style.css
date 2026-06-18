@@ -16,6 +16,9 @@
     --barra: rgba(255,255,255,0.15);
     --azul-escuro1: #142c64;
     --azul-escuro2: #10234e;
+    --roxo-hover: #5f25b5;
+    --azul-hover: #1d18c5;
+    --escuro-hover: #09101f;
 }
 
 #inicio {
@@ -179,7 +182,7 @@ li {
 }
 
 #quiz {
-    display: none;
+    display: block;
 }
 
 #quiz h2 {
@@ -241,7 +244,7 @@ label input {
 }
 
 #resultado {
-    display: block;
+    display: none;
 }
 
 .titulo2 {
@@ -345,4 +348,24 @@ label input {
     display: flex;
     justify-content: center;
     margin-top: 20px;
+}
+
+button:hover {
+    background: linear-gradient(
+        50deg,
+        var(--roxo-hover),
+        var(--azul-hover),
+        var(--escuro-hover)
+    );
+
+    transform: scale(1.05);
+}
+
+label {
+    transition: 0.3s;
+}
+
+label:hover {
+    background-color: var(--background);
+    cursor: pointer;
 }
