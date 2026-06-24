@@ -141,6 +141,7 @@ h1 {
 .card1 ul li {
     display: flex;
     list-style-type: none;
+    gap: 5px;
 }
 
 .card2 {
@@ -182,7 +183,7 @@ li {
 }
 
 #quiz {
-    display: block;
+    display: none;
 }
 
 #quiz h2 {
@@ -244,7 +245,7 @@ label input {
 }
 
 #resultado {
-    display: none;
+    display: block;
 }
 
 .titulo2 {
@@ -344,6 +345,15 @@ label input {
     margin-bottom: 10px;
 }
 
+.outra-area {
+    position: absolute;
+    left: 430px;
+    bottom: 95px;
+    font-size: 14px;
+    font-family: 'outfit', sans-serif;
+    color: var(--azul-claro2);
+}
+
 .botao_refazer {
     display: flex;
     justify-content: center;
@@ -359,6 +369,7 @@ button:hover {
     );
 
     transform: scale(1.05);
+    cursor: pointer;
 }
 
 label {
