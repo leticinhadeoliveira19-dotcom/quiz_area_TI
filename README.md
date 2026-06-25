@@ -60,14 +60,9 @@ Durante o desenvolvimento deste projeto, pratiquei conceitos importantes de Java
 * Sistema de pontuação dinâmica
 * Responsividade com CSS
 
-## Como executar
+## Acesse o projeto
 
-1. Clone o repositório
-2. Abra o arquivo `index.html` no navegador
-
-ou
-
-Acesse a versão online pelo GitHub Pages.
+https://leticinhadeoliveira19-dotcom.github.io/quiz_area_TI/
 
 ## Autor
 
