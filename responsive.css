@@ -1,0 +1,107 @@
+/* Tablet */
+@media (max-width: 900px) {
+
+    main {
+        width: 85%;
+        height: auto;
+    }
+
+    .card1,
+    .card4 {
+        width: auto;
+    }
+
+    .listas {
+        gap: 40px;
+    }
+
+    .sugestao {
+        position: static;
+        text-align: center;
+        margin-top: 15px;
+    }
+
+    .circulo1,
+    .circulo2 {
+        display: none;
+    }
+
+}
+
+/* Celular */
+@media (max-width: 768px) {
+
+    body {
+        padding: 20px;
+    }
+
+    main {
+        width: 100%;
+        height: auto;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .material-symbols-outlined.icone-titulo,
+    .material-symbols-outlined.icone-titulo2 {
+        font-size: 80px;
+    }
+
+    .card1,
+    .card4 {
+        width: auto;
+        height: auto;
+    }
+
+    .listas {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .listas2 {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .habilidades {
+        margin-top: 10px;
+    }
+
+    .area h3 {
+        font-size: 20px;
+    }
+
+    .area p {
+        font-size: 14px;
+    }
+
+    .bloco {
+        gap: 15px;
+    }
+
+    label {
+        font-size: 14px;
+    }
+
+    button {
+        width: 100%;
+        max-width: 250px;
+    }
+
+    .sugestao {
+        position: static;
+        text-align: center;
+        margin-top: 15px;
+        font-size: 14px;
+    }
+
+    .circulo1,
+    .circulo2 {
+        display: none;
+    }
+}
