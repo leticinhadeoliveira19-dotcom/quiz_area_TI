@@ -351,6 +351,93 @@ const pontuacao = {
     devops: 0
 }
 
+const resultados = {
+    desenvolvimento: {
+        titulo: 'Desenvolvimento de Software',
+        descricao: 'Você gosta de criar soluções para problemas, construir aplicações e entender a lógica que faz programas e sistemas funcionarem. Pessoas com esse perfil costumam se interessar por desenvolvimento, criatividade aplicada à tecnologia e aprendizado constante.',
+        habilidades: [
+            'Lógica de programação',
+            'Algoritmos',
+            'JavaScript',
+            'Java ou Python',
+            'Git e GitHub',
+            'Resolução de problemas'
+        ]
+    },
+    dados: {
+        titulo: 'Dados',
+        descricao: 'Você gosta de analisar informações, encontrar padrões e transformar grandes quantidades de dados em respostas que ajudam pessoas e empresas a tomar decisões melhores. Seu perfil combina com atividades que exigem investigação, raciocínio analítico e atenção aos detalhes.',
+        habilidades: [
+            'Estatística básica',
+            'SQL',
+            'Excel',
+            'Visualização de dados',
+            'Python',
+            'Pensamento analítico'
+        ]
+    },
+    ia: {
+        titulo: 'Inteligência Artificial (IA)',
+        descricao: 'Você gosta de explorar tecnologias inovadoras, resolver problemas complexos e descobrir como as máquinas podem aprender, reconhecer padrões e tomar decisões. Pessoas com esse perfil geralmente são curiosas e gostam de desafios intelectuais.',
+        habilidades: [
+            'Python',
+            'Matemática básica para IA',
+            'Machine Learning',
+            'Análise de dados',
+            'Pensamento lógico',
+            'Redes neurais'
+        ]
+    },
+    redes: {
+        titulo: 'Redes',
+        descricao: 'Você gosta de entender como diferentes dispositivos e sistemas se conectam e trabalham juntos. Seu perfil combina com quem se interessa pelos bastidores da tecnologia e gosta de garantir que tudo funcione de forma estável, rápida e segura.',
+        habilidades: [
+            'Redes TCP/IP',
+            'Linux',
+            'Infraestrutura de TI',
+            'Diagnóstico de problemas',
+            'Segurança de redes',
+            'Cloud Computing'
+        ]
+    },
+    seguranca: {
+        titulo: 'Segurança da Informação',
+        descricao: 'Você gosta de investigar problemas, identificar riscos e encontrar maneiras de proteger sistemas e informações contra ameaças digitais. Pessoas com esse perfil costumam ser curiosas, observadoras e gostam de descobrir falhas antes que elas se tornem problemas maiores.',
+        habilidades: [
+            'Lógica de programação',
+            'Redes de computadores',
+            'Linux',
+            'Análise de vulnerabilidades',
+            'Segurança ofensiva e defensiva',
+            'Python'
+        ]
+    },
+    uxui: {
+        titulo: 'UX/UI',
+        descricao: 'Você gosta de pensar na experiência das pessoas, entender suas necessidades e criar produtos digitais que sejam intuitivos, agradáveis e fáceis de usar. Seu perfil une criatividade, empatia e interesse por comportamento humano.',
+        habilidades: [
+            'Figma',
+            'Design de interfaces',
+            'Pesquisa com usuários',
+            'Prototipação',
+            'Experiência do usuário',
+            'Comunicação visual'
+        ]
+    },
+    devops: {
+        titulo: 'DevOps',
+        descricao: 'Você gosta de organização, automação e eficiência. Seu perfil combina com quem busca melhorar processos, integrar diferentes tecnologias e garantir que sistemas e aplicações funcionem de forma confiável e contínua.',
+        habilidades: [
+            'Linux',
+            'Automação',
+            'Git e GitHub',
+            'Docker',
+            'Cloud Computing',
+            'Integração e entrega contínua (CI/CD)'
+        ]
+    }
+}
+
 let perguntaAtual = 0;
 const botao_comecar = document.querySelector('.comecar');
 const tela_inicio = document.querySelector('#inicio');
@@ -360,14 +447,22 @@ let textoAlternativas = document.querySelectorAll('.texto-alternativa');
 const botao_prox = document.querySelector('.botao_prox');
 const tela_resultado = document.querySelector('#resultado');
 const radios = document.querySelectorAll('input[type="radio"]');
-
-
-
-
+let areaResultado = document.querySelector('.area-resultado');
+let descricaoResultado = document.querySelector('.descricao-resultado');
+let textoHabilidades = document.querySelectorAll('.texto-habilidade');
+let outraArea = document.querySelector('.outra-area');
+const contadorPergunta = document.querySelector('.contador');
+const barraProgresso = document.querySelector('.progresso');
+const botao_refazer = document.querySelector('.botao_refazer');
 
 
 
 const mostrarPergunta = () => {
+
+    contadorPergunta.textContent = `Pergunta ${perguntaAtual + 1} de ${perguntas.length}`;
+    
+    let porcentagem = (perguntaAtual + 1) / perguntas.length * 100;
+    barraProgresso.style.width = `${porcentagem}%`;
 
     pergunta.textContent = perguntas[perguntaAtual].pergunta;
 
@@ -377,20 +472,39 @@ const mostrarPergunta = () => {
     }
 }
 
-const ranking = Object.entries(pontuacao);
+const mostrarResultado = () => {
 
-let maior = ranking[0];
-for (let i = 0; i < ranking.length; i++) {
-    if (ranking[i][1] >= maior[i]) {
-        maior = ranking[i];
+    const ranking = Object.entries(pontuacao);
+    let maior = ranking[0];
+
+    for (let i = 0; i < ranking.length; i++) {
+        if (ranking[i][1] > maior[1]) {
+            maior = ranking[i];
+        }
     }
+
+    let segunda_maior;
+
+    for (let i = 0; i < ranking.length; i++) {
+        if (ranking[i][0] != maior[0]) {
+            if (segunda_maior == undefined || ranking[i][1] > segunda_maior[1]) {
+                segunda_maior = ranking[i];
+            }
+        }
+    }
+
+    tela_quiz.style.display = 'none';
+    tela_resultado.style.display = 'block';
+
+    areaResultado.textContent = resultados[maior[0]].titulo;
+    descricaoResultado.textContent = resultados[maior[0]].descricao;
+
+    for (let i = 0; i < textoHabilidades.length; i++) {
+        textoHabilidades[i].textContent = resultados[maior[0]].habilidades[i];
+    }
+    
+    outraArea.textContent = resultados[segunda_maior[0]].titulo;
 }
-
-
-
-
-
-
 
 
 
@@ -401,9 +515,6 @@ botao_comecar.addEventListener('click', () => {
 
     mostrarPergunta ();
 });
-
-
-
 
 botao_prox.addEventListener('click', () => {
 
@@ -423,17 +534,27 @@ botao_prox.addEventListener('click', () => {
     const areaEscolhida =
     perguntas[perguntaAtual].alternativas[alternativaEscolhida].area;
     pontuacao[areaEscolhida]++;
-    console.log(pontuacao);
 
     if (perguntaAtual < 9) {
         perguntaAtual++;
         mostrarPergunta ();
     } else {
-        tela_quiz.style.display = 'none';
-        tela_resultado.style.display = 'block';
+        mostrarResultado();
     }
     
 });
 
+botao_refazer.addEventListener('click', () => {
+    tela_resultado.style.display = 'none';
+    tela_inicio.style.display = 'block';
 
+    perguntaAtual = 0;
 
+    for (let area in pontuacao) {
+        pontuacao[area] = 0;
+    }
+
+    for (let i = 0; i < radios.length; i++) {
+        radios[i].checked = false;
+    }
+});

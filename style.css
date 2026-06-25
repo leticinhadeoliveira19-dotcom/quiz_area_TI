@@ -22,7 +22,7 @@
 }
 
 #inicio {
-    display: none;
+    display: block;
 }
 
 body {
@@ -245,7 +245,7 @@ label input {
 }
 
 #resultado {
-    display: block;
+    display: none;
 }
 
 .titulo2 {
@@ -345,11 +345,11 @@ label input {
     margin-bottom: 10px;
 }
 
-.outra-area {
+.sugestao {
     position: absolute;
     left: 430px;
     bottom: 95px;
-    font-size: 14px;
+    font-size: 12px;
     font-family: 'outfit', sans-serif;
     color: var(--azul-claro2);
 }
