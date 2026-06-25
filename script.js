@@ -487,7 +487,7 @@ const mostrarResultado = () => {
 
     for (let i = 0; i < ranking.length; i++) {
         if (ranking[i][0] != maior[0]) {
-            if (segunda_maior == undefined || ranking[i][1] > segunda_maior[1]) {
+            if (segunda_maior === undefined || ranking[i][1] > segunda_maior[1]) {
                 segunda_maior = ranking[i];
             }
         }
@@ -526,7 +526,7 @@ botao_prox.addEventListener('click', () => {
         }
     }
 
-    if (alternativaEscolhida == undefined) {
+    if (alternativaEscolhida === undefined) {
         alert('Selecione uma alternativa.');
         return;
     }
@@ -535,7 +535,7 @@ botao_prox.addEventListener('click', () => {
     perguntas[perguntaAtual].alternativas[alternativaEscolhida].area;
     pontuacao[areaEscolhida]++;
 
-    if (perguntaAtual < 9) {
+    if (perguntaAtual < perguntas.length - 1) {
         perguntaAtual++;
         mostrarPergunta ();
     } else {
