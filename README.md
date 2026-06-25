@@ -2,6 +2,17 @@
 
 Um quiz interativo desenvolvido com HTML, CSS e JavaScript que ajuda usuários a descobrir qual área da tecnologia mais combina com seus interesses.
 
+## Preview
+
+### Tela inicial
+![Tela inicial](imagens/inicio.png)
+
+### Tela quiz
+![Tela quiz](imagens/quiz.png)
+
+### Resultado
+![Resultado](imagens/resultado.png)
+
 ## Sobre o projeto
 
 Este projeto apresenta uma série de perguntas relacionadas á tecnologia. Com base nas respostas escolhidas pelo usuário, o sistema calcula uma pontuação para diferentes áreas de atuação e exibe um resultado personalizado.
