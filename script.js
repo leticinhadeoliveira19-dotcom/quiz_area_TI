@@ -20,7 +20,7 @@ const perguntas = [
                 area: 'dados'
             },
             {
-                texto: 'Será que o servidor ou a rede estão com problema',
+                texto: 'Será que o servidor ou a rede estão com problema?',
                 area: 'redes'
             },
             {
