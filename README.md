@@ -62,7 +62,7 @@ Durante o desenvolvimento deste projeto, pratiquei conceitos importantes de Java
 
 ## Acesse o projeto
 
-https://leticinhadeoliveira19-dotcom.github.io/quiz_area_TI/
+https://leticiasantosol.github.io/quiz_area_TI/
 
 ## Autor
 
