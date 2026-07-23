@@ -21,10 +21,6 @@
         margin-top: 15px;
     }
 
-    .circulo1,
-    .circulo2 {
-        display: none;
-    }
 
 }
 
@@ -58,8 +54,7 @@
 
     .listas {
         flex-direction: column;
-        gap: 20px;
-        align-items: center;
+        gap: 5px;
         text-align: center;
     }
 
@@ -100,8 +95,4 @@
         font-size: 14px;
     }
 
-    .circulo1,
-    .circulo2 {
-        display: none;
-    }
 }
